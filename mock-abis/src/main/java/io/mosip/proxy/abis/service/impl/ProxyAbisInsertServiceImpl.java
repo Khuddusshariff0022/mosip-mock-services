@@ -549,6 +549,7 @@ public class ProxyAbisInsertServiceImpl implements ProxyAbisInsertService {
 							galleryRefIdCountInDB, referenceIds.size());
 					throw new RequestException(FailureReasonsConstants.REFERENCEID_NOT_FOUND);
 				}
+                logger.info("refId ===",refId);
 				List<String> bioValues = proxyAbisBioDataRepository.fetchBioDataByRefId(refId);
 				if (!bioValues.isEmpty()) {
 					for (String bioValue : bioValues) {
